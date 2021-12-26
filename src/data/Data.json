@@ -1,0 +1,50 @@
+{
+  "hisData": [
+    { "id": 1, "date": "2015/04", "contents": "静岡県立藤枝東高等学校入学" },
+    { "id": 2, "date": "2018/04", "contents": "静岡大学情報学部情報科学科入学" },
+    {
+      "id": 3,
+      "date": "2020/08/17~28",
+      "contents": "株式会社バンダイナムコスタジオインターン(2週間)"
+    },
+    {
+      "id": 4,
+      "date": "2020/09/02~03",
+      "contents": "株式会社パナソニックシステムネットワークス開発研究所インターン参加(2日間)"
+    },
+    { "id": 5, "date": "2021/03/22~26", "contents": "クックパッド株式会社インターン参加(1週間)" },
+    { "id": 6, "date": "2021/08/16~20", "contents": "株式会社いい生活インターン参加(1週間)" }
+  ],
+  "workData": [
+    {
+      "id": 1,
+      "title": "Sajikagen",
+      "img": "sajikagen.jpeg",
+      "contents": "便利な音声検索拡張機能",
+      "tech": "JavaScript WebSpeechAPI Chrome拡張",
+      "link": "https://chrome.google.com/webstore/detail/sajikagen/ngpenjgbamelckakjeddknffhnheenbe?utm_source=chrome-ntp-icon"
+    },
+    {
+      "id": 2,
+      "title": "ShimohuriApp",
+      "img": "shimo_edge.jpeg",
+      "contents": "霜降り明星ANNの野党のコーナーをまとめたアプリ",
+      "tech": "TypeScript Next.js Django",
+      "link": "https://github.com/onikun94/radioapp"
+    }
+  ],
+  "aboutData": [
+    {
+      "id": 1,
+      "site": "GitHub",
+      "link": "https://github.com/onikun94",
+      "img": "github.svg"
+    },
+    {
+      "id": 2,
+      "site": "Twitter",
+      "link": "https://twitter.com/onikun94",
+      "img": "twitter.svg"
+    }
+  ]
+}
