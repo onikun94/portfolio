@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { VFC } from 'react';
 
 type WorkPageProps = {
@@ -10,14 +11,14 @@ type WorkPageProps = {
 
 const Work: VFC<WorkPageProps> = (props) => {
   return (
-    <div className="border-2 rounded-xl  m-4 p-2 text-center w-2/5 hover:bg-gray-200">
+    <div className="p-2 m-4 w-2/5 text-center hover:bg-gray-200 rounded-xl border-2">
       <div className="m-2">
-        <a className=" font-bold text-lg   " href={props.link}>
+        <a className="text-lg font-bold" href={props.link}>
           {props.title}
         </a>
       </div>
 
-      <img className="m-auto w-2/4 rounded-xl" src={props.img} />
+      <Image className="m-auto w-2/4 rounded-xl" src={props.img} alt="my-work-image" />
       <p className="my-2">{props.contents}</p>
       <p className="my-2 text-gray-400">{props.tech}</p>
     </div>

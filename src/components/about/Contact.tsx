@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { VFC } from 'react';
 
 type ContactPageProps = {
@@ -8,11 +9,11 @@ type ContactPageProps = {
 
 const Contact: VFC<ContactPageProps> = (props) => {
   return (
-    <div className=" m-4 p-2 w-2/5 text-center">
+    <div className="p-2 m-4 w-2/5 text-center">
       <p className="font-bold">{props.site}</p>
 
       <a href={props.link}>
-        <img className="m-auto w-2/5" src={props.img} />
+        <Image className="m-auto w-2/5" src={props.img} alt="snsImage" />
       </a>
     </div>
   );
