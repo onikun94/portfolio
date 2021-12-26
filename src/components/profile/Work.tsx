@@ -17,8 +17,15 @@ const Work: VFC<WorkPageProps> = (props) => {
           {props.title}
         </a>
       </div>
-
-      <Image className="m-auto w-2/4 rounded-xl" src={props.img} alt="my-work-image" />
+      <div className="text-center">
+        <Image
+          className="w-2/4 rounded-xl"
+          src={props.img}
+          width={200}
+          height={200}
+          alt="my-work-image"
+        />
+      </div>
       <p className="my-2">{props.contents}</p>
       <p className="my-2 text-gray-400">{props.tech}</p>
     </div>
