@@ -19,7 +19,7 @@
     {
       "id": 1,
       "title": "Sajikagen",
-      "img": "sajikagen.jpeg",
+      "img": "/sajikagen.jpeg",
       "contents": "便利な音声検索拡張機能",
       "tech": "JavaScript WebSpeechAPI Chrome拡張",
       "link": "https://chrome.google.com/webstore/detail/sajikagen/ngpenjgbamelckakjeddknffhnheenbe?utm_source=chrome-ntp-icon"
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "title": "ShimohuriApp",
-      "img": "shimo_edge.jpeg",
+      "img": "/shimo_edge.jpeg",
       "contents": "霜降り明星ANNの野党のコーナーをまとめたアプリ",
       "tech": "TypeScript Next.js Django",
       "link": "https://github.com/onikun94/radioapp"
@@ -38,13 +38,13 @@
       "id": 1,
       "site": "GitHub",
       "link": "https://github.com/onikun94",
-      "img": "github.svg"
+      "img": "/github.svg"
     },
     {
       "id": 2,
       "site": "Twitter",
       "link": "https://twitter.com/onikun94",
-      "img": "twitter.svg"
+      "img": "/twitter.svg"
     }
   ]
 }
