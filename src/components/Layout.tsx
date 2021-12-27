@@ -27,6 +27,8 @@ const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => 
         />
         <meta property="og:site_name" content="onikunのブログ" />
         <meta property="og:image" content="https://onikun.com/onikun.png" />
+        <link rel="icon" href="/favicons/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" />
       </Head>
       <Header title="onikun's blog" link1="Home" link2="Profile" link3="About" />
       {children}

@@ -6,7 +6,7 @@ import Layout from '@/components/Layout';
 
 const About: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="about onikun">
       <Contacts />
     </Layout>
   );

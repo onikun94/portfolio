@@ -7,7 +7,7 @@ import Works from '@/components/profile/Works';
 
 const Profile: NextPage = () => {
   return (
-    <Layout>
+    <Layout title="onikun's profile">
       <Careers />
       <Works />
     </Layout>
