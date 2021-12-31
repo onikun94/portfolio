@@ -32,7 +32,7 @@
       "img": "/shimo_edge.jpeg",
       "contents": "霜降り明星ANNの野党のコーナーをまとめたアプリ",
       "tech": "TypeScript Next.js Django",
-      "link": "https://github.com/onikun94/radioapp"
+      "link": "https://shimohuri.vercel.app/"
     }
   ],
   "aboutData": [
