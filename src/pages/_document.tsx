@@ -10,7 +10,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="ja" dir="ltr">
-        <Head></Head>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Spartan:wght@100&display=swap"
+            rel="stylesheet"
+          ></link>
+        </Head>
         <body>
           <Main />
           <NextScript />

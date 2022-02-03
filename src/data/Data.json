@@ -21,7 +21,7 @@
     {
       "id": 1,
       "title": "Sajikagen",
-      "img": "/sajikagen.jpeg",
+      "img": "/microphone.svg",
       "contents": "便利な音声検索拡張機能",
       "tech": "JavaScript WebSpeechAPI Chrome拡張",
       "link": "https://chrome.google.com/webstore/detail/sajikagen/ngpenjgbamelckakjeddknffhnheenbe?utm_source=chrome-ntp-icon"
@@ -29,7 +29,7 @@
     {
       "id": 2,
       "title": "ShimohuriApp",
-      "img": "/shimo_edge.jpeg",
+      "img": "/headphones.svg",
       "contents": "霜降り明星ANNの野党のコーナーをまとめたアプリ",
       "tech": "TypeScript Next.js Django",
       "link": "https://shimohuri.vercel.app/"

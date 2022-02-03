@@ -13,9 +13,15 @@ module.exports = {
       // Serif 体がメインの場合は、 `...defaultTheme.fontFamily.serif` を展開する
       ja: [...defaultTheme.fontFamily.sans],
       en: [...defaultTheme.fontFamily.sans],
+      spartan: ['Spartan'],
+      sanjp: ['NotoSansJP'],
     },
     extend: {
       colors: {
+        background: {
+          dark: '#4d4948',
+          DEFAULT: '#FFFFFF',
+        },
         // 開発で使用するカラーを設定する
         // `DEFAULT` で設定しているものは、`text-theme` や `bg-primary` のように使用できる
         // それ以外は、 `text-theme-light` や `bg-primary-dark` のように使用する
