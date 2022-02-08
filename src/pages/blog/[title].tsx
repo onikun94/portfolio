@@ -28,7 +28,7 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
 export const getServerSideProps: GetServerSideProps = async (contextId) => {
   console.log('id = ', contextId.query.title);
   const title = contextId.query.title;
-  const requestUrl = `http://localhost:8000/blog/${title}`;
+  const requestUrl = `http://onikunblog.herokuapp.com/blog/${title}`;
   if (requestUrl) {
     const response = await getBlogData(requestUrl);
     console.log('resres = ', response);

@@ -19,7 +19,7 @@ const Blog: NextPage<ContentsPageProps> = ({ results }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (contextId) => {
-  const requestUrl = `http://localhost:8000/blog`;
+  const requestUrl = `http://onikunblog.herokuapp.com/blog`;
   if (requestUrl) {
     const response = await getBlogData(requestUrl);
     return {
