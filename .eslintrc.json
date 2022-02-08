@@ -17,6 +17,7 @@
   ],
   "plugins": ["@typescript-eslint", "import", "unused-imports", "tailwindcss"],
   "rules": {
+    "@typescript-eslint/no-unsafe-assignment": "off",
     // あった方が良さそうなルール
     "semi": "error",
     "no-console": "warn",

@@ -12,7 +12,7 @@ type HeaderTypeProps = {
 const Header: VFC<HeaderTypeProps> = (props) => {
   return (
     <div className="my-4">
-      <h1 className="my-4 text-3xl text-center font-sanjp">{props.title}</h1>
+      <h1 className="my-4 font-sanjp text-3xl text-center">{props.title}</h1>
       <ul className="m-8 text-2xl font-medium text-right">
         <li className="inline-block px-2 font-spartan">
           <Link href="/">{props.link1}</Link>

@@ -1,17 +1,10 @@
-import { getBlogData } from '@/api/getBlogData';
-import { BlogType, TitleBlogType } from '@/types/BlogType';
-import { GetServerSideProps } from 'next';
-import { marked } from 'marked';
-import React, { VFC } from 'react';
-import Router from 'next/router';
 import Link from 'next/link';
+import React, { VFC } from 'react';
+
+import { TitleBlogType } from '@/types/BlogType';
 
 type ContentsPageProps = {
   results: TitleBlogType[];
-};
-
-const handleId = (searchId: number) => {
-  Router.push(`/blog?q=${encodeURIComponent(searchId)}`);
 };
 
 const Title: VFC<ContentsPageProps> = ({ results }) => {
