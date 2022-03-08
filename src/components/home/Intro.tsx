@@ -9,6 +9,7 @@ const Intro = () => {
           src="/onikun.png"
           width={200}
           height={200}
+          decoding="async"
           alt="my-icon"
         />
       </div>
