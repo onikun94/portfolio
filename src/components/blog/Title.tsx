@@ -9,17 +9,22 @@ type ContentsPageProps = {
 
 const Title: VFC<ContentsPageProps> = ({ results }) => {
   return (
-    <div className="mx-4">
-      {results.map((data) => (
-        <div key={data.id}>
-          <p>{data.updated_at}</p>
-          <Link href={`blog/${data.title}`}>
-            <h1 className="cursor-pointer">{data.title}</h1>
-          </Link>
-          <br />
-          <br />
-        </div>
-      ))}
+    <div className="mx-auto w-3/5 ">
+      <div className="flex flex-wrap justify-center">
+        {results.map((data) => (
+          <div
+            className="p-2 m-4 w-2/5 text-center hover:bg-gray-200 cursor-pointer rounded-xl shadow"
+            key={data.id}
+          >
+            <Link href={`blog/${data.title}`}>
+              <div className="">
+                <p>{data.updated_at}</p>
+                <p className="my-4">{data.title}</p>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

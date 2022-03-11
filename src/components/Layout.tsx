@@ -30,7 +30,7 @@ const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => 
         <link rel="icon" href="/favicons/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" />
       </Head>
-      <Header title="onikun's blog" link1="Home" link2="Profile" link3="Blog" link4="About" />
+      <Header title="onikun's blog" link1="Home" link2="Blog" link3="About" />
       {children}
     </div>
   );

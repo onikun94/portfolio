@@ -7,9 +7,9 @@ type CareerPageProps = {
 
 const Career: VFC<CareerPageProps> = (props) => {
   return (
-    <div className="p-2 m-4 mx-8 border-b-2 border-gray-200 border-opacity-50">
+    <div className="pb-1 mx-8 ">
       <p className="my-1 text-sm text-gray-600">{props.date}</p>
-      <p className=" text-xl ">{props.contents}</p>
+      <p className=" text-sm  font-sanjp">{props.contents}</p>
     </div>
   );
 };

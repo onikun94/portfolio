@@ -13,7 +13,6 @@ type ContentsPageProps = {
 };
 
 const Contents: VFC<ContentsPageProps> = ({ results }) => {
-  console.log('results = ', marked(`${results.contents}`));
   marked.setOptions({
     langPrefix: 'rounded-xl my-2 text-sm hljs language-',
     highlight: (code, lang) => {

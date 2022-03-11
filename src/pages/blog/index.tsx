@@ -1,4 +1,4 @@
-import { GetServerSideProps, NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import React from 'react';
 
 import { getBlogData } from '@/api/getBlogData';
@@ -18,7 +18,7 @@ const Blog: NextPage<ContentsPageProps> = ({ results }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const requestUrl = `http://onikunblog.herokuapp.com/blog`;
   if (requestUrl) {
     const response = await getBlogData(requestUrl);
