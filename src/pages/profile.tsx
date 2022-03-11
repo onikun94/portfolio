@@ -2,9 +2,9 @@ import { NextPage } from 'next';
 import React from 'react';
 
 import Layout from '@/components/Layout';
+import Card from '@/components/profile/Card';
 import Careers from '@/components/profile/Careers';
 import Works from '@/components/profile/Works';
-import Card from '@/components/profile/Card';
 
 const Profile: NextPage = () => {
   return (

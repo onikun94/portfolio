@@ -1,5 +1,5 @@
-import React, { VFC } from 'react';
 import Image from 'next/image';
+import React, { VFC } from 'react';
 
 type cardPropsType = {
   content1: string;
@@ -13,8 +13,8 @@ type cardPropsType = {
 const Card: VFC<cardPropsType> = (props) => {
   return (
     <p>
-      <div className="  p-2     my-4  ">
-        <div className="justify-end flex">
+      <div className="p-2 my-4">
+        <div className="flex justify-end">
           <div className=" mx-16">
             <Image
               className=" w-2/4 rounded-full"
@@ -25,9 +25,9 @@ const Card: VFC<cardPropsType> = (props) => {
               alt="my-icon"
             />
           </div>
-          <div className="m-2  w-2/3  ">
+          <div className="m-2 w-2/3">
             <div className="p-4 ">
-              <p className=" text-base  p-1 ">{props.content1}</p>
+              <p className="p-1 text-base">{props.content1}</p>
               <p className="text-xs   ">{props.content2}</p>
             </div>
             <div className="p-4 text-sm border-y">

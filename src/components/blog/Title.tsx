@@ -13,7 +13,7 @@ const Title: VFC<ContentsPageProps> = ({ results }) => {
       <div className="flex flex-wrap justify-center">
         {results.map((data) => (
           <div
-            className="p-2 m-4 w-2/5 text-center hover:bg-gray-200 cursor-pointer rounded-xl shadow"
+            className="p-2 m-4 w-2/5 text-center hover:bg-gray-200 rounded-xl shadow cursor-pointer"
             key={data.id}
           >
             <Link href={`blog/${data.title}`}>

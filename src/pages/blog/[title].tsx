@@ -1,12 +1,12 @@
-import { marked } from 'marked';
 import hljs from 'highlight.js';
+import { marked } from 'marked';
 import 'highlight.js/styles/github-dark-dimmed.css';
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import React, { VFC } from 'react';
 
 import { getBlogData } from '@/api/getBlogData';
 import Layout from '@/components/Layout';
-import { BlogType, TitleBlogType, TitleResponse } from '@/types/BlogType';
+import { BlogType } from '@/types/BlogType';
 
 type ContentsPageProps = {
   results: BlogType;
@@ -44,7 +44,10 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
 
 export const getServerSideProps: GetServerSideProps = async (contextId) => {
   const title = contextId.query.title;
-  const requestUrl = `http://onikunblog.herokuapp.com/blog/${title}`;
+  let requestUrl;
+  if (typeof title === 'string') {
+    requestUrl = `http://onikunblog.herokuapp.com/blog/${title}`;
+  }
   if (requestUrl) {
     const response = await getBlogData(requestUrl);
     return {

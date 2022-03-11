@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 
-import Intro from '@/components/home/Intro';
 import Layout from '@/components/Layout';
 import Card from '@/components/profile/Card';
 import Careers from '@/components/profile/Careers';
@@ -9,7 +8,7 @@ import Works from '@/components/profile/Works';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <div className="w-3/5 mx-auto">
+      <div className="mx-auto w-3/5">
         <Card
           content1="山口大陽"
           content2="Taiyo Yamaguchi"
