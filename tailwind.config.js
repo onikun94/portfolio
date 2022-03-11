@@ -14,7 +14,7 @@ module.exports = {
       ja: [...defaultTheme.fontFamily.sans],
       en: [...defaultTheme.fontFamily.sans],
       spartan: ['Spartan'],
-      sanjp: ['NotoSansJP'],
+      sanjp: ['Noto Sans JP'],
     },
     extend: {
       colors: {
