@@ -13,7 +13,7 @@ const Contact: VFC<ContactPageProps> = (props) => {
       <p className="">{props.site}</p>
 
       <a href={props.link} className="text-center">
-        <Image className="m-auto w-2/5" src={props.img} width={200} height={200} alt="snsImage" />
+        <Image className="m-auto w-2/5" src={props.img} width={100} height={100} alt="snsImage" />
       </a>
     </div>
   );
