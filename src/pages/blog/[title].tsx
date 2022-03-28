@@ -1,12 +1,12 @@
 import hljs from 'highlight.js';
 import { marked } from 'marked';
 import 'highlight.js/styles/github-dark-dimmed.css';
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import React, { VFC } from 'react';
 
 import { getBlogData } from '@/api/getBlogData';
 import Layout from '@/components/Layout';
-import { BlogType } from '@/types/BlogType';
+import { BlogType, TitleBlogType } from '@/types/BlogType';
 
 type ContentsPageProps = {
   results: BlogType;
@@ -42,22 +42,31 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  let requestUrl;
-  requestUrl = `http://onikunblog.herokuapp.com/blog/`;
-  const response = await getBlogData(requestUrl);
+type getStaticPropsType = {
+  results: TitleBlogType[];
+};
+type getStaticParamsType = {
+  title: string;
+};
 
-  console.log('response = ', response);
+export const getStaticPaths: GetStaticPaths<getStaticParamsType> = async () => {
+  const requestUrl = `http://onikunblog.herokuapp.com/blog/`;
+  const response = await getBlogData(requestUrl);
   const paths = response.map((post) => ({
     params: { title: post.title },
   }));
   return { paths, fallback: 'blocking' };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  let requestUrl;
-  if (params !== undefined) {
-    requestUrl = `http://onikunblog.herokuapp.com/blog/${params.title}`;
+export const getStaticProps: GetStaticProps<getStaticPropsType, getStaticParamsType> = async ({
+  params,
+}) => {
+  let requestUrl: string;
+  if (params === undefined) {
+    requestUrl = `http://onikunblog.herokuapp.com/blog/jstest`;
+  } else {
+    const title = params.title;
+    requestUrl = `http://onikunblog.herokuapp.com/blog/${title}`;
   }
 
   if (requestUrl) {
