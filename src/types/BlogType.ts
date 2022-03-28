@@ -11,11 +11,3 @@ export type TitleBlogType = {
   updated_at: Date;
   title: string;
 };
-
-export type BlogResponse = {
-  results: BlogType[];
-};
-
-export type TitleResponse = {
-  results: TitleBlogType[];
-};

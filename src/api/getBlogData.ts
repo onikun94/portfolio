@@ -1,7 +1,7 @@
-import { BlogResponse, TitleResponse } from '@/types/BlogType';
+import { TitleBlogType } from '@/types/BlogType';
 
-export const getBlogData = async (url: string): Promise<TitleResponse | BlogResponse> => {
+export const getBlogData = async (url: string): Promise<TitleBlogType[]> => {
   const res: Response = await fetch(url);
-  const _res: TitleResponse | BlogResponse = await res.json();
+  const _res: TitleBlogType[] = await res.json();
   return _res;
 };
