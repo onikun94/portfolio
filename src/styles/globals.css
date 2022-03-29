@@ -13,6 +13,14 @@ h3 {
 }
 strong {
   @apply font-black;
+  @apply to-black;
+}
+ul {
+  @apply list-disc;
+  @apply my-2;
+}
+img {
+  @apply rounded-xl;
 }
 
 @layer base {
