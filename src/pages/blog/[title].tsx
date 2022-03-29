@@ -21,7 +21,7 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
   });
   return (
     <Layout>
-      <div className="mx-auto w-3/5">
+      <div className="mx-auto w-4/5">
         <p>{results.updated_at}</p>
         <h1 className="text-center">{results.title}</h1>
         <br />
