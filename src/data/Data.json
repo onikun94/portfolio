@@ -16,7 +16,8 @@
     { "id": 6, "date": "2021/07/04", "contents": "技育CAMPハッカソンvol5努力賞" },
     { "id": 7, "date": "2021/08/16~20", "contents": "株式会社いい生活インターン参加(1週間)" },
     { "id": 8, "date": "2021/09", "contents": "技育展(ライフスタイル)参加" },
-    { "id": 9, "date": "2022/03〜", "contents": "EXPACT株式会社" }
+    { "id": 9, "date": "2022/04/24", "contents": "クックパッド株式会社（超絶技巧プログラミング）" },
+    { "id": 10, "date": "2022/03〜", "contents": "EXPACT株式会社" }
   ],
   "workData": [
     {
@@ -48,6 +49,12 @@
       "site": "Twitter",
       "link": "https://twitter.com/onikun94",
       "img": "/twitter.svg"
+    },
+    {
+      "id": 3,
+      "site": "Zenn",
+      "link": "https://zenn.dev/onikun",
+      "img": "/zenn.png"
     }
   ]
 }
