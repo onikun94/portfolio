@@ -1,9 +1,11 @@
+import Data from '../data/Data.json';
+
+import type { NextPage } from 'next';
+
 import Layout from '@/components/Layout';
 import Card from '@/components/profile/Card';
 import Careers from '@/components/profile/Careers';
 import Works from '@/components/profile/Works';
-import type { NextPage } from 'next';
-import Data from '../data/Data.json';
 
 const Home: NextPage = () => {
   return (

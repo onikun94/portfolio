@@ -6,7 +6,7 @@ import Data from '@/data/Data.json';
 
 const Works: VFC = () => {
   return (
-    <>
+    <div>
       <h1 className="mt-8 font-spartan text-center">Works</h1>
       <div>
         <div className="flex justify-center m-2">
@@ -15,7 +15,7 @@ const Works: VFC = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -11,25 +11,25 @@ const Header: VFC<HeaderTypeProps> = ({ title, snsData, headLink }) => {
   return (
     <div className=" bg-white ">
       <div className="mx-auto w-3/5">
-        <div className="font-spartan justify-between flex ">
-          <h1 className="pt-4 pl-4 font-spartan text-2xl flex ">{title}</h1>
-          <div className=" text-xl pt-4 flex">
+        <div className="flex justify-between font-spartan">
+          <h1 className="flex pt-4 pl-4 font-spartan text-2xl">{title}</h1>
+          <div className="flex pt-4 text-xl">
             {snsData.map((sns) => (
               <div key={sns.id} className="mx-2">
                 <Link href={sns.link}>
                   <a>
-                    <Image src={sns.img} width={32} height={32}></Image>
+                    <Image src={sns.img} width={32} height={32} alt={sns.img}></Image>
                   </a>
                 </Link>
               </div>
             ))}
           </div>
         </div>
-        <ul className="text-md font-medium flex ">
+        <ul className="flex text-lg">
           {headLink.map((h) => (
             <li
               key={h.linkName}
-              className="inline-block bg-white px-4 py-2 rounded-md font-spartan "
+              className="inline-block py-2 px-4 font-spartan bg-white rounded-md"
             >
               <Link href={h.link}>
                 <a>{h.linkName}</a>

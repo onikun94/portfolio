@@ -1,12 +1,13 @@
+import 'highlight.js/styles/github-dark-dimmed.css';
+import hljs from 'highlight.js';
+import { marked } from 'marked';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import React, { VFC } from 'react';
+
 import { getBlogData, getOnlyBlogData } from '@/api/getBlogData';
 import { Chapter } from '@/components/blog/Chapter';
 import Layout from '@/components/Layout';
 import { BlogType } from '@/types/BlogType';
-import hljs from 'highlight.js';
-import 'highlight.js/styles/github-dark-dimmed.css';
-import { marked } from 'marked';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import React, { VFC } from 'react';
 
 type ContentsPageProps = {
   results: BlogType;
@@ -22,11 +23,15 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
   return (
     <Layout>
       <div className="mx-auto w-3/5">
-        <p>{results.updated_at}</p>
-        <Chapter
-          chapImg={`/blogImg/${results.image.substring(7, results.image.length - 4)}.svg`}
-          chapTitle={results.title}
-        />
+        <div>{results.updated_at}</div>
+        {results.image !== '' ? (
+          <Chapter
+            chapImg={`/blogImg/${results.image.substring(7, results.image.length - 4)}.svg`}
+            chapTitle={results.title}
+          />
+        ) : (
+          <Chapter chapImg={`/blogImg/arrow.svg`} chapTitle={results.title} />
+        )}
         {results.contents ? (
           <div
             className="text-sm"
@@ -35,7 +40,7 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
             }}
           ></div>
         ) : (
-          <></>
+          <div></div>
         )}
       </div>
     </Layout>
@@ -62,13 +67,11 @@ export const getStaticPaths: GetStaticPaths<getStaticParamsType> = async () => {
 export const getStaticProps: GetStaticProps<getStaticPropsType, getStaticParamsType> = async ({
   params,
 }) => {
-  console.log('params = ', params);
   let requestUrl: string;
   if (params === undefined) {
     requestUrl = `http://onikunblog.herokuapp.com/blog/hoge`;
   } else {
     const title = params.title;
-    console.log('title = ', title);
     requestUrl = `http://onikunblog.herokuapp.com/blog/${title}`;
   }
 

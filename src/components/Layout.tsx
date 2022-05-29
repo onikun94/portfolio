@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { ReactNode, VFC } from 'react';
+
 import Data from '../data/Data.json';
 import Header from './Header';
 type LayoutTypeProps = {

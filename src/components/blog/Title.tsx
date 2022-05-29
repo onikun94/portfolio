@@ -1,7 +1,8 @@
-import { TitleBlogType } from '@/types/BlogType';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { VFC } from 'react';
+
+import { TitleBlogType } from '@/types/BlogType';
 
 type ContentsPageProps = {
   results: TitleBlogType[];
@@ -12,22 +13,23 @@ const Title: VFC<ContentsPageProps> = ({ results }) => {
     <div className="mx-auto w-3/5 ">
       <div className="flex flex-wrap justify-center">
         {results.map((data) => (
-          <div
-            className="p-2 m-4 w-2/5 text-center bg-white hover:bg-orange-300 rounded-xl shadow cursor-pointer"
-            key={data.id}
-          >
-            <Link href={`blog/${data.title}`}>
-              <div className="">
-                <p>{data.updated_at}</p>
+          <Link key={data.id} href={`/blog/${encodeURIComponent(data.title)}`}>
+            <a className="p-2 m-4 w-2/5 text-center bg-white hover:bg-orange-300 rounded-xl shadow cursor-pointer">
+              <div>{data.updated_at}</div>
+              {data.image !== null ? (
                 <Image
                   src={`/blogImg/${data.image.substring(45, data.image.length - 4)}.svg`}
                   width={80}
                   height={80}
+                  alt={data.image.substring(45, data.image.length - 4)}
                 />
-                <p className="my-4">{data.title}</p>
-              </div>
-            </Link>
-          </div>
+              ) : (
+                <Image src={`/blogImg/arrow.svg`} width={80} height={80} alt={'arrow'} />
+              )}
+
+              <p className="my-4">{data.title}</p>
+            </a>
+          </Link>
         ))}
       </div>
     </div>
