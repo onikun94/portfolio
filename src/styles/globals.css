@@ -11,6 +11,9 @@ h2 {
 h3 {
   @apply text-lg;
 }
+p {
+  @apply my-3 text-base;
+}
 strong {
   @apply font-black;
   @apply to-black;
@@ -25,6 +28,6 @@ img {
 
 @layer base {
   body {
-    @apply font-sanjp font-light  leading-relaxed tracking-wider;
+    @apply font-sanjp font-light  leading-relaxed tracking-wider bg-orange-100;
   }
 }
