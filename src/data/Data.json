@@ -1,4 +1,11 @@
 {
+  "profData": [
+    { "id": "name", "content": "山口大陽" },
+    { "id": "rome", "content": "Taiyo Yamaguchi" },
+    { "id": "where", "content": "出身：静岡県藤枝市" },
+    { "id": "birth", "content": "生年月日：1999年6月22日" },
+    { "id": "hobby", "content": "趣味：麻雀" }
+  ],
   "hisData": [
     { "id": 1, "date": "2015/04", "contents": "静岡県立藤枝東高等学校入学" },
     { "id": 2, "date": "2018/04", "contents": "静岡大学情報学部情報科学科入学" },
@@ -23,7 +30,7 @@
     {
       "id": 1,
       "title": "Sajikagen",
-      "img": "/microphone.svg",
+      "img": "/workImg/microphone.svg",
       "contents": "便利な音声検索拡張機能",
       "tech": "JavaScript WebSpeechAPI Chrome拡張",
       "link": "https://chrome.google.com/webstore/detail/sajikagen/ngpenjgbamelckakjeddknffhnheenbe?utm_source=chrome-ntp-icon"
@@ -31,7 +38,7 @@
     {
       "id": 2,
       "title": "ShimohuriApp",
-      "img": "/headphones.svg",
+      "img": "/workImg/headphones.svg",
       "contents": "霜降り明星ANNの野党のコーナーをまとめたアプリ",
       "tech": "TypeScript Next.js Django",
       "link": "https://shimohuri.vercel.app/"
@@ -42,19 +49,23 @@
       "id": 1,
       "site": "GitHub",
       "link": "https://github.com/onikun94",
-      "img": "/github.svg"
+      "img": "/snsImg/github.svg"
     },
     {
       "id": 2,
       "site": "Twitter",
       "link": "https://twitter.com/onikun94",
-      "img": "/twitter.svg"
+      "img": "/snsImg/twitter.svg"
     },
     {
       "id": 3,
       "site": "Zenn",
       "link": "https://zenn.dev/onikun",
-      "img": "/zenn.png"
+      "img": "/snsImg/zenn.png"
     }
+  ],
+  "headerData": [
+    { "link": "/", "linkName": "Home" },
+    { "link": "/blog", "linkName": "Blog" }
   ]
 }
