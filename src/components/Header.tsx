@@ -3,9 +3,6 @@ import Link from 'next/link';
 import React, { VFC } from 'react';
 type HeaderTypeProps = {
   title: string;
-  // link1: string;
-  // link2: string;
-  // link3: string;
   snsData: { id: number; site: string; link: string; img: string }[];
   headLink: { link: string; linkName: string }[];
 };
@@ -30,7 +27,10 @@ const Header: VFC<HeaderTypeProps> = ({ title, snsData, headLink }) => {
         </div>
         <ul className="text-md font-medium flex ">
           {headLink.map((h) => (
-            <li className="inline-block bg-white px-4 py-2 rounded-md font-spartan ">
+            <li
+              key={h.linkName}
+              className="inline-block bg-white px-4 py-2 rounded-md font-spartan "
+            >
               <Link href={h.link}>
                 <a>{h.linkName}</a>
               </Link>
