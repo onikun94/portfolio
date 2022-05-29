@@ -11,7 +11,7 @@ type WorkPageProps = {
 
 const Work: VFC<WorkPageProps> = (props) => {
   return (
-    <div className="p-2 m-4 w-2/5 text-center hover:bg-gray-200 rounded-xl border-2">
+    <div className="p-2 m-4 w-2/5 text-center bg-white hover:bg-orange-300 rounded-xl  ">
       <a className="text-lg " href={props.link}>
         <div className="m-2 text-base">{props.title}</div>
         <div className="text-center">
