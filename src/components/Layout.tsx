@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import { ReactNode, VFC } from 'react';
-
+import Data from '../data/Data.json';
 import Header from './Header';
-
 type LayoutTypeProps = {
   children: ReactNode;
   title?: string;
@@ -30,7 +29,7 @@ const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => 
         <link rel="icon" href="/favicons/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" />
       </Head>
-      <Header title="onikun's blog" link1="Home" link2="Blog" link3="About" />
+      <Header title="onikun's blog" snsData={Data.aboutData} headLink={Data.headerData} />
       {children}
     </div>
   );
