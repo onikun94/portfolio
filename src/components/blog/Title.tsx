@@ -7,8 +7,8 @@ import { TitleBlogType } from '@/types/BlogType';
 type ContentsPageProps = {
   results: TitleBlogType[];
 };
-
-const Title: VFC<ContentsPageProps> = ({ results }) => {
+// eslint-disable-next-line react/display-name
+const Title: VFC<ContentsPageProps> = React.memo(({ results }) => {
   return (
     <div className="mx-auto w-3/5 ">
       <div className="flex flex-wrap justify-center">
@@ -34,6 +34,6 @@ const Title: VFC<ContentsPageProps> = ({ results }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Title;
