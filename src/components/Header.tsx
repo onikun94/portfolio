@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, VFC } from 'react';
+import React, { VFC } from 'react';
 type HeaderTypeProps = {
   title: string;
   snsData: { id: number; site: string; link: string; img: string }[];
