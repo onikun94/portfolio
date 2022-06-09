@@ -1,27 +1,26 @@
 import { GetServerSideProps, NextPage } from 'next';
 import Router from 'next/router';
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { getBlogData } from '@/api/getBlogData';
 import { PaginationButton } from '@/components/blog/PaginationButton';
 import Title from '@/components/blog/Title';
-import Layout from '@/components/Layout';
 import { BlogAllType } from '@/types/BlogType';
 
 type ContentsPageProps = {
   all: BlogAllType;
 };
 
-const handlePage = (url: string) => {
-  const urlParam = new URLSearchParams(url.split('?')[1]);
-  const pageNum = Number(urlParam.get('offset'));
-  // eslint-disable-next-line
-  Router.push(`/blog/?page=${pageNum}`);
-};
 const Blog: NextPage<ContentsPageProps> = ({ all }) => {
+  const handlePage = useCallback((url: string) => {
+    const urlParam = new URLSearchParams(url.split('?')[1]);
+    const pageNum = Number(urlParam.get('offset'));
+    // eslint-disable-next-line
+    Router.push(`/blog/?page=${pageNum}`);
+  }, []);
   return (
-    <Layout title="blog site">
-      <Title results={all.results} />
+    <>
+      <Title results={Array.prototype.reverse.call(all.results)} />
       <div className="text-center">
         <PaginationButton
           buttonClick={() => (all.previous ? handlePage(all.previous) : undefined)}
@@ -32,7 +31,7 @@ const Blog: NextPage<ContentsPageProps> = ({ all }) => {
           buttonName={'次へ'}
         />
       </div>
-    </Layout>
+    </>
   );
 };
 
