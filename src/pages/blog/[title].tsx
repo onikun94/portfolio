@@ -6,7 +6,6 @@ import React, { VFC } from 'react';
 
 import { getBlogData, getOnlyBlogData } from '@/api/getBlogData';
 import { Chapter } from '@/components/blog/Chapter';
-import Layout from '@/components/Layout';
 import { BlogType } from '@/types/BlogType';
 
 type ContentsPageProps = {
@@ -15,35 +14,33 @@ type ContentsPageProps = {
 
 const Contents: VFC<ContentsPageProps> = ({ results }) => {
   marked.setOptions({
-    langPrefix: 'rounded-xl my-2 text-sm hljs language-',
+    langPrefix: 'rounded-xl my-4 text-sm hljs language-',
     highlight: (code, lang) => {
       return hljs.highlightAuto(code, [lang]).value;
     },
   });
   return (
-    <Layout>
-      <div className="mx-auto w-3/5">
-        <div>{results.updated_at}</div>
-        {results.image !== '' ? (
-          <Chapter
-            chapImg={`/blogImg/${results.image.substring(7, results.image.length - 4)}.svg`}
-            chapTitle={results.title}
-          />
-        ) : (
-          <Chapter chapImg={`/blogImg/arrow.svg`} chapTitle={results.title} />
-        )}
-        {results.contents ? (
-          <div
-            className="text-sm"
-            dangerouslySetInnerHTML={{
-              __html: marked(results.contents),
-            }}
-          ></div>
-        ) : (
-          <div></div>
-        )}
-      </div>
-    </Layout>
+    <div className="mx-auto w-4/5">
+      <div>{results.updated_at}</div>
+      {results.image !== '' ? (
+        <Chapter
+          chapImg={`/blogImg/${results.image.substring(7, results.image.length - 4)}.svg`}
+          chapTitle={results.title}
+        />
+      ) : (
+        <Chapter chapImg={`/blogImg/arrow.svg`} chapTitle={results.title} />
+      )}
+      {results.contents ? (
+        <div
+          className="py-4 px-8 my-4 text-sm bg-white rounded-xl"
+          dangerouslySetInnerHTML={{
+            __html: marked(results.contents),
+          }}
+        ></div>
+      ) : (
+        <div></div>
+      )}
+    </div>
   );
 };
 
