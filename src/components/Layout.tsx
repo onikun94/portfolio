@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ReactNode, VFC } from 'react';
+import { ReactNode, useEffect, useState, VFC } from 'react';
 
 import Data from '../data/Data.json';
 import Header from './Header';
@@ -9,6 +9,20 @@ type LayoutTypeProps = {
 };
 
 const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => {
+  const [winWidth, setWinWidth] = useState(0);
+
+  useEffect(() => {
+    console.log('useEffect is called');
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setWinWidth(window.innerWidth);
+      };
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    } else {
+      return;
+    }
+  }, []);
   return (
     <div>
       <Head>
@@ -30,7 +44,12 @@ const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => 
         <link rel="icon" href="/favicons/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" />
       </Head>
-      <Header title="onikun's blog" snsData={Data.aboutData} headLink={Data.headerData} />
+      <Header
+        title="onikun's blog"
+        snsData={Data.aboutData}
+        headLink={Data.headerData}
+        width={winWidth}
+      />
       {children}
     </div>
   );
