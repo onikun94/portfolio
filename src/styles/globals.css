@@ -12,7 +12,7 @@ h3 {
   @apply text-lg;
 }
 p {
-  @apply my-3 text-base;
+  @apply my-8 text-sm;
 }
 strong {
   @apply font-black;
@@ -20,6 +20,10 @@ strong {
 }
 ul {
   @apply list-disc;
+  @apply list-inside;
+  @apply my-2;
+}
+li {
   @apply my-2;
 }
 img {
