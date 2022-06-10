@@ -1,21 +1,25 @@
 import Head from 'next/head';
-import { ReactNode, useEffect, useState, VFC } from 'react';
+import { ReactNode, useEffect, VFC } from 'react';
+import { useRecoilState } from 'recoil';
 
 import Data from '../data/Data.json';
 import Header from './Header';
+
+import { responsiveState } from '@/atoms/responsive';
 type LayoutTypeProps = {
   children: ReactNode;
   title?: string;
 };
 
 const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => {
-  const [winWidth, setWinWidth] = useState(0);
+  // const [winWidth, setWinWidth] = useState(0);
+  const [width, setRecoilWidth] = useRecoilState(responsiveState);
 
   useEffect(() => {
     console.log('useEffect is called');
     if (typeof window !== 'undefined') {
       const handleResize = () => {
-        setWinWidth(window.innerWidth);
+        setRecoilWidth(window.innerWidth);
       };
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
@@ -48,7 +52,7 @@ const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => 
         title="onikun's blog"
         snsData={Data.aboutData}
         headLink={Data.headerData}
-        width={winWidth}
+        width={width}
       />
       {children}
     </div>
