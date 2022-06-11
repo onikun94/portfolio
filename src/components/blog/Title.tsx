@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { VFC } from 'react';
-
-import { TitleBlogType } from '@/types/BlogType';
 import { useRecoilValue } from 'recoil';
+
 import { responsiveState } from '@/atoms/responsive';
+import { TitleBlogType } from '@/types/BlogType';
 
 type ContentsPageProps = {
   results: TitleBlogType[];

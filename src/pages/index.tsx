@@ -1,12 +1,13 @@
+import { useRecoilValue } from 'recoil';
+
 import Data from '../data/Data.json';
 
 import type { NextPage } from 'next';
 
+import { responsiveState } from '@/atoms/responsive';
 import Card from '@/components/profile/Card';
 import Careers from '@/components/profile/Careers';
 import Works from '@/components/profile/Works';
-import { useRecoilValue } from 'recoil';
-import { responsiveState } from '@/atoms/responsive';
 
 const Home: NextPage = () => {
   const width = useRecoilValue(responsiveState);
