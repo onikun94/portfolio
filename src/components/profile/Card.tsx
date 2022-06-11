@@ -40,7 +40,7 @@ const Card: VFC<cardPropsType> = React.memo(({ profContents }) => {
         </div>
       ) : (
         <div className="p-2 my-4">
-          <div className="mx-16 mt-16">
+          <div className="text-center">
             <Image
               className="rounded-full "
               src="/onikun1.png"
@@ -50,9 +50,8 @@ const Card: VFC<cardPropsType> = React.memo(({ profContents }) => {
               alt="my-icon"
             />
           </div>
-          <div className="m-2 w-2/3">
-            <div className="p-4 "></div>
-            <div className="p-4 text-sm border-y-2 border-white">
+          <div className="m-2 p-4">
+            <div className=" text-center  p-4 text-sm border-y-2 border-white">
               {profContents.map((prof) => (
                 <p className="m-4" key={prof.id}>
                   {prof.content}
