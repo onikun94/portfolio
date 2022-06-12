@@ -12,11 +12,9 @@ type LayoutTypeProps = {
 };
 
 const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => {
-  // const [winWidth, setWinWidth] = useState(0);
   const [width, setRecoilWidth] = useRecoilState(responsiveState);
 
   useEffect(() => {
-    console.log('useEffect is called');
     if (typeof window !== 'undefined') {
       const handleResize = () => {
         setRecoilWidth(window.innerWidth);
@@ -26,7 +24,7 @@ const Layout: VFC<LayoutTypeProps> = ({ children, title = "onikun's blog" }) => 
     } else {
       return;
     }
-  }, []);
+  }, [setRecoilWidth]);
   return (
     <div>
       <Head>
