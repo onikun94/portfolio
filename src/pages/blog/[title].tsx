@@ -37,7 +37,7 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
 };
 
 type getStaticPropsType = {
-  results: SupaDataList;
+  results: SupaDataList | null;
 };
 type getStaticParamsType = {
   title: string;
