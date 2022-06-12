@@ -20,6 +20,7 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
   });
   return (
     <div className="mx-auto w-4/5">
+      <div>{results.created_at}</div>
       {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
       <Chapter chapImg={`/blogImg/arrow.svg`} chapTitle={results.title!} />
       {results.contents ? (
@@ -55,9 +56,15 @@ export const getStaticProps: GetStaticProps<getStaticPropsType, getStaticParamsT
 }) => {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const detail = await getDetailData(params!.title);
-  return {
-    props: { results: detail },
-  };
+  if (detail) {
+    return {
+      props: { results: detail },
+    };
+  } else {
+    return {
+      notFound: true,
+    };
+  }
 };
 
 export default Contents;
