@@ -66,6 +66,6 @@
   ],
   "headerData": [
     { "link": "/", "linkName": "Home" },
-    { "link": "/blog", "linkName": "Blog" }
+    { "link": "/blog/page/1", "linkName": "Blog" }
   ]
 }
