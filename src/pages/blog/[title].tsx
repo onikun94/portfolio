@@ -45,7 +45,8 @@ type getStaticParamsType = {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allData = await getAllData(0, 6);
-  const paths = allData.data.map((data) => `/blog/${data.id}`);
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const paths = allData.data!.map((data) => `/blog/${data.id}`);
   return { paths, fallback: true };
 };
 

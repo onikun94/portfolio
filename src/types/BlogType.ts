@@ -29,6 +29,6 @@ export type SupaDataList = {
 };
 
 export type SupaList = {
-  data: SupaDataList[];
+  data: SupaDataList[] | null;
   count: number | null;
 };
