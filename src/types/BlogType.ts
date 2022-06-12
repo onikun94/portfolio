@@ -23,9 +23,9 @@ export type TitleBlogType = {
 
 export type SupaDataList = {
   id: number;
-  title: string;
-  contents: string;
-  created_at: string;
+  title: string | null;
+  contents: string | null;
+  created_at: string | null;
 };
 
 export type SupaList = {
