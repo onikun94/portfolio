@@ -20,3 +20,15 @@ export type TitleBlogType = {
   title: string;
   image: string;
 };
+
+export type SupaDataList = {
+  id: number;
+  title: string;
+  contents: string;
+  created_at: string;
+};
+
+export type SupaList = {
+  data: SupaDataList[];
+  count: number | null;
+};
