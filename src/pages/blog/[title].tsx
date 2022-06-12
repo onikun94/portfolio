@@ -20,8 +20,7 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
   });
   return (
     <div className="mx-auto w-4/5">
-      {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
-      <div>{results.created_at!}</div>
+      {results.created_at !== undefined ? <div>{results.created_at}</div> : <div></div>}
       {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
       <Chapter chapImg={`/blogImg/arrow.svg`} chapTitle={results.title!} />
       {results.contents ? (
