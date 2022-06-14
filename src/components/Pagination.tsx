@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+
 import { PaginationButton } from './blog/PaginationButton';
 
 type PaginationPropsType = {
