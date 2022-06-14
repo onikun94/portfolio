@@ -1,20 +1,16 @@
 import React from 'react';
 
 type PaginationButtonPropsType = {
-  buttonClick: () => void;
   buttonName: string;
 };
 
 // eslint-disable-next-line react/display-name
 export const PaginationButton: React.VFC<PaginationButtonPropsType> = React.memo(
-  ({ buttonClick, buttonName }) => {
+  ({ buttonName }) => {
     return (
-      <button
-        className="py-2 px-4 m-4 text-center bg-white hover:bg-gray-200 rounded-xl shadow cursor-pointer"
-        onClick={buttonClick}
-      >
+      <div className=" inline-block py-2 px-4 m-2 text-center bg-white hover:bg-gray-200 rounded-xl shadow cursor-pointer">
         {buttonName}
-      </button>
+      </div>
     );
   },
 );

@@ -6,7 +6,7 @@ import { Pagination } from '@/components/Pagination';
 import { getAllData } from '@/lib/getData';
 import { SupaList } from '@/types/BlogType';
 
-const PER_PAGE = 2;
+const PER_PAGE = 6;
 
 type SupaType = {
   all: SupaList;
@@ -18,7 +18,7 @@ const Blog: NextPage<SupaType> = ({ all }) => {
       {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
       <Title results={all.data!} />
       {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
-      <Pagination totalCount={all.count!} />
+      <Pagination totalCount={all.count!} perpage={PER_PAGE} />
     </>
   );
 };
