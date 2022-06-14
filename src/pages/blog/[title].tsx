@@ -20,16 +20,19 @@ const Contents: VFC<ContentsPageProps> = ({ results }) => {
   });
   return (
     <div className="mx-auto w-4/5">
-      <div>{results.created_at}</div>
-      {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
-      <Chapter chapImg={`/blogImg/arrow.svg`} chapTitle={results.title!} />
-      {results.contents ? (
-        <div
-          className="py-4 px-8 my-4 text-sm bg-white rounded-xl"
-          dangerouslySetInnerHTML={{
-            __html: marked(results.contents),
-          }}
-        ></div>
+      {results ? (
+        <>
+          <div>{results.created_at}</div>
+          {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
+          <Chapter chapImg={`/blogImg/arrow.svg`} chapTitle={results.title!} />
+          <div
+            className="py-4 px-8 my-4 text-sm bg-white rounded-xl"
+            dangerouslySetInnerHTML={{
+              /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
+              __html: marked(results.contents!),
+            }}
+          ></div>
+        </>
       ) : (
         <div></div>
       )}
