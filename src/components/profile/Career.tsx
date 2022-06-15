@@ -8,8 +8,8 @@ type CareerPageProps = {
 const Career: VFC<CareerPageProps> = (props) => {
   return (
     <div className="pb-1 mx-8 ">
-      <p className="my-1 text-sm text-gray-600">{props.date}</p>
-      <p className=" m-4 font-sanjp text-sm">{props.contents}</p>
+      <p className=" my-0 text-sm text-gray-600">{props.date}</p>
+      <p className=" mt-4 font-sanjp text-sm">{props.contents}</p>
     </div>
   );
 };
