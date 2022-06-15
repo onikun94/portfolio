@@ -7,7 +7,9 @@ export async function getAllData(offset: number, limit: number): Promise<SupaLis
     .from<SupaDataList>('onikunBlog')
     .select(
       `
-      *
+      id,
+      title,
+      created_at
     `,
       { count: 'exact' },
     )
