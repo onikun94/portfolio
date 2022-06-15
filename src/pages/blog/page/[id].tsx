@@ -15,10 +15,16 @@ type SupaType = {
 const Blog: NextPage<SupaType> = ({ all }) => {
   return (
     <>
-      {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
-      <Title results={all.data!} />
-      {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
-      <Pagination totalCount={all.count!} perpage={PER_PAGE} />
+      {all ? (
+        <>
+          {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
+          <Title results={all.data!} />
+          {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
+          <Pagination totalCount={all.count!} perpage={PER_PAGE} />
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
