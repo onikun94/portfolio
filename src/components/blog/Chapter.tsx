@@ -8,7 +8,7 @@ type ChapterPropsType = {
 
 export const Chapter: React.VFC<ChapterPropsType> = ({ chapImg, chapTitle }) => {
   return (
-    <div className="text-center mb-8">
+    <div className="mb-8 text-center">
       <Image src={chapImg} width={128} height={128} alt={chapImg} />
       <h1 className="text-center">{chapTitle}</h1>
     </div>
