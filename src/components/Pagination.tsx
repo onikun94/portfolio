@@ -13,13 +13,11 @@ export const Pagination: React.FC<PaginationPropsType> = ({ totalCount, perpage 
   return (
     <div className="text-center">
       {range(1, Math.ceil(totalCount / perpage)).map((number, index) => (
-        <>
-          <Link key={index} href={`/blog/page/${number}`}>
-            <a>
-              <PaginationButton buttonName={String(number)} />
-            </a>
-          </Link>
-        </>
+        <Link key={index} href={`/blog/page/${number}`}>
+          <a>
+            <PaginationButton buttonName={String(number)} />
+          </a>
+        </Link>
       ))}
     </div>
   );
