@@ -9,6 +9,7 @@ export async function getAllData(offset: number, limit: number): Promise<SupaLis
       `
       id,
       title,
+      img_name,
       created_at
     `,
       { count: 'exact' },
