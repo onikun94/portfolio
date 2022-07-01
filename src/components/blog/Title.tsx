@@ -23,7 +23,7 @@ const Title: VFC<SupaContentsPageProps> = React.memo(({ results }) => {
                 <a className="p-2 m-4 w-2/5 text-center bg-white hover:bg-orange-300 rounded-xl shadow cursor-pointer">
                   <div>{data.created_at}</div>
                   <Image
-                    src={`/blogImg/${data.img_name}.svg`}
+                    src={`/blogImg/${data.img_name!}.svg`}
                     width={80}
                     height={80}
                     alt={'arrow'}
